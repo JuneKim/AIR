@@ -1,6 +1,5 @@
-# AIR(the Autonomous and Intelligent Robot)
-
-The project AIR aims to create the personal robot which supports some autonomous and intelligent features.
+# The project Asul-E
+The project Asul-E aims to create the personal robot which supports some autonomous and intelligent features.
 For instance, it includes SLAM(Simultaneous Locationlization and Mapping), navigation, emotional activities and so on.
 
 [Hardware Requirements]
