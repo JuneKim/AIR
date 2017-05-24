@@ -1,4 +1,4 @@
-# The project Asul-E
+# The project ASUL-E
 The project Asul-E aims to create the personal robot which supports some autonomous and intelligent features.
 For instance, it includes SLAM(Simultaneous Locationlization and Mapping), navigation, emotional activities and so on.
 
