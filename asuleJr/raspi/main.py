@@ -28,13 +28,14 @@ class Main():
 	
 if __name__ == "__main__":
 	global board
-	board = multiwii.asulejr('/dev/ttyUSB0')
-	cameara = picamera.PiCamera()
+	board = "test"
+#	board = multiwii.asulejr('/dev/ttyUSB0')
+	camera = picamera.PiCamera()
 	camera.vflip = True
 	camera.hflip = True
 
 	start = Main()
-	MainThread = threading.Thread(target=start.start, args=(board, camera))
+	MainThread = threading.Thread(target=start, args=(board, camera))
 	MainThread.start()
 
 	def signal_handler(signal, frame):

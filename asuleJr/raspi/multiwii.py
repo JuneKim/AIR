@@ -146,7 +146,7 @@ class asulejr(object):
 	def twosComp(self, hexValue):
 		firstVal = int(hexValue[:1], 16)
 		if firstVal >= 8:
-			bValue = in(int(hexValue, 16))
+			bValue = int(hexValue, 16)
 			bValue = bValue[2:]
 			newBinary = []
 			length = len(bValue)
@@ -201,10 +201,12 @@ class asulejr(object):
 						break
 
 				ser.close()
-
+			except Exception, e:
+				print ("error")
 
 
 	def stop(self):
+		print ("stop")
 
 	def askRC(self):
 		self.ser.flushInput()
@@ -216,12 +218,12 @@ class asulejr(object):
 		else:
 			msp_hex = response.encode("hex")
 
-			if msp_hex[10:14] = "":
+			if msp_hex[10:14] == "":
 				print("poll unavailble")
 			else:
 				self.roll = float(self.littleEndian(msp_hex[10:14]))
 
-			if msp_hex[14:18] = "":
+			if msp_hex[14:18] == "":
 				print("pitch unavailale")
 			else:
 				self.pitch = float(self.littelEndian(msp_hex[14:18]))
